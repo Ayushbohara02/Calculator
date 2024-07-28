@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="ayush.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculater">
+            <h1>CALCULATOR</h1>
+            <input type="text" name="result" id="result">
+            <table>
+                <tr>
+                    <td><button type="button1" placeholder="7" onclick="display('7')">7</td>
+                        <td><button type="button1" placeholder="8" onclick="display('8')">8</td>
+                            <td><button type="button1" placeholder="9" onclick="display('9')">9</td>
+                                <td><button type="button" placeholder="+" onclick="display('+')">+</td>
+
+                </tr>
+                <tr>
+                    <td><button type="button1" placeholder="4" onclick="display('4')">4</td>
+                        <td><button type="button1" placeholder="5" onclick="display('5')">5</td>
+                            <td><button type="button1" placeholder="6" onclick="display('6')">6</td>
+                                <td><button type="button" placeholder="-" onclick="display('-')">-</td>
+
+                 </tr>
+                  <tr>
+                     <td><button type="button1" placeholder="1" onclick="display('1')">1</td>
+                           <td><button type="button1" placeholder="2" onclick="display('2')">2</td>
+                           <td><button type="button1" placeholder="3" onclick="display('3')">3</td> 
+                               <td><button type="button" placeholder="*" onclick="display('*')">*</td>
+
+                 <tr>
+                    <td><button type="button" placeholder="ac" onclick="clearscreen('')">ac</td>
+                    <td><button type="button1" placeholder="0" onclick="display('0')">0</td>
+                        <td><button type="button1" placeholder="00" onclick="display('00')">00</td>
+                            <td><button type="button" placeholder="/" onclick="display('/')">/</td>
+
+
+
+                </tr>
+                <td><button type="button" placeholder="=" onclick="calculater('=')">=</td>
+                    <td><button type="button" placeholder="." onclick="display('.')">.</td>
+                        <td><button type="button" placeholder="x" onclick="backspace('')">x</td>
+                            <td><button type="button" placeholder="%" onclick="display('%')">%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function display (value){
+            document.getElementById("result").value +=value;
+
+        }
+        function clearscreen (value){
+            document.getElementById("result").value='';
+
+        }
+        function calculater(){
+            var r= document.getElementById("result").value;
+            var s=eval(r);
+            document.getElementById("result").value=s;
+
+        }
+        function backspace(){
+            var abc =document.getElementById("result").value;
+            document.getElementById("result").value=abc. substring(0,abc. length -1)
+        }
+    </script>
+</body>
+</html>
